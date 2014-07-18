@@ -1,3 +1,4 @@
 module.exports = {
-	'server': ['concurrent']
+	'server': ['watch'],
+	'server:debug': ['concurrent']
 };

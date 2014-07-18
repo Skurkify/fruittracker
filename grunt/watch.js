@@ -4,7 +4,7 @@ module.exports = {
 			spawn: false,
 			atBegin: true
 		},
-		files: ['*.js'],
+		files: ['../*.js'],
 		tasks: ['express']
 	}
 };
