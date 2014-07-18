@@ -5,6 +5,7 @@ module.exports = {
 		debug: true
 	},
 	dev: {
+		serverreload: true,
 		debug: true
 	}
 };

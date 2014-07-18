@@ -33,7 +33,7 @@ app.get('/fruitcount', function(req, res){
 	.map(function(fruit){
 		return {
 			displayText: "The count for this fruit is " + fruit.count
-		};
+		}; 
 	})
 	.value();
 
@@ -51,4 +51,6 @@ app.get('/fruitcount', function(req, res){
 	});
 });
 
-app.listen(3000);
+app.listen(3000, function(){
+	console.log("Running server.");
+});

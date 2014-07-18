@@ -1,10 +1,14 @@
 module.exports = {
-	scripts: {
+	express: {
 		options: {
 			spawn: false,
-			atBegin: true
+			atBegin: true,
+			livereload: true
 		},
-		files: ['../*.js'],
-		tasks: ['express']
+		files: ['*.js'],
+		tasks: [
+			'express:dev:stop',
+			'express'
+		]
 	}
 };
