@@ -2,6 +2,7 @@ var express = require('express'),
 	_ = require('lodash'),
 	app = express();
 
+app.use(express.static(__dirname + '/public'));
 
 var fruits = [
 	{
@@ -15,6 +16,10 @@ var fruits = [
 	{
 		name: "orange",
 		count: 50
+	},
+	{
+		name: 'kiwi',
+		count: 25
 	}
 ];
 
@@ -28,7 +33,7 @@ app.get('/fruitcount', function(req, res){
 
 	var results = _.chain(fruits)
 	.filter(function(fruit){
-		return fruit.count > 50;
+		return fruit.count > 55;
 	})
 	.map(function(fruit){
 		return {
@@ -39,6 +44,7 @@ app.get('/fruitcount', function(req, res){
 
 	if(fruit){
 		res.json({
+			name: fruit.name,
 			count: fruit.count,
 			otherStuff: results
 		});
