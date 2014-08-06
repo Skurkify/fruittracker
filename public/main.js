@@ -1,8 +1,11 @@
 $.get("/fruitcount?name=apple")
 .then(function(data){
-  $('#fruit-name').text(data.name);
-  $('#count').text(data.count);
+  var source = $("#tracker").html();
+  var template = Handlebars.compile(source);
+  $("#main").html(template(data));
 })
 .fail(function(err){
   $('.error-box').text("Something went wrong");
 });
+
+
