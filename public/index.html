@@ -5,16 +5,23 @@
 	<title>Sample NodeJS Document</title>
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="handlebars.js"></script>
 </head>
 <body>
+<div id="main">
+	<h1>Sample</h1>
+
+<script id="tracker" type="text/x-handlebars-template">
 	<div>
 		<div>
 			<h1 class="error-box"></h1>
 		</div>
 		<h1>FruitTracker Express</h1>
-		<h2>Fruit Name: <span id="fruit-name"></span></h1>
-		<p>Count: <span id="count"></span></p>
+		<h2>Fruit Name: {{name}}</h1>
+		<p>Count: {{count}}</span></p>
 	</div>
+</script>
+</div>
 	<script src="main.js"></script>
 </body>
 </html>
